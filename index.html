@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./js/darkmode.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" id="bootstrap">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Random Number Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <script src="./js/random.js" async></script>
+    <script src="./js/tables.js" async></script>
+    <script src="./js/buttons.js" async></script>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="noprint">
+
+            <div id="options" class="text-center">
+                <button onclick="window.print()" class="btn btn-lg btn-success">Print 🖨</button>
+                <button onclick="swap()" class="btn btn-lg btn-basic">Swap ↹</button>
+                <button onclick="darkmode()" class="btn btn-lg btn-dark" id="darkmode-toggle">Mode 💡</button>
+            </div>
+            <hr>
+            <div id="random-number-list-left" class="container px456">
+                <h2 class="text-center">List of random numbers</h2>
+                <div class="form-group">
+                    <label for="length">Amount of Numbers</label>
+                    <input type="number" name="length" id="length" class="text form-control" value="10">
+                </div>
+                <div class="form-group">
+                    <label for="min">Minimum Value</label>
+                    <input type="number" name="min" id="min" class="text form-control" value="1">
+                </div>
+                <div class="form-group">
+                    <label for="max">Maximum Value</label>
+                    <input type="number" name="max" id="max" class="text form-control" value="500">
+                </div>
+                <div class="px811" style="vertical-align: -webkit-baseline-middle;">
+                    <div class="form-check">
+                        <input type="checkbox" id="disallow-repeats" class="form-check-input">
+                        <label class="form-check-label" for="disallow-repeats">No repeated values</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="bold-repeats" class="form-check-input">
+                        <label class="form-check-label" for="bold-repeats">Bold repeated values</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="sort-results" class="form-check-input">
+                        <label class="form-check-label" for="sort-results">Sort Results</label>
+                    </div>
+                </div>
+                <div class="px811" style="vertical-align: -webkit-baseline-middle;">
+                    <br>
+                    <button onclick="listButtonClick()" class="btn btn-lg btn-primary">Generate</button>
+                </div>
+            </div>
+
+            <!-- <br> -->
+
+            <div id="random-number-table" class="container px456">
+                <h2 class="text-center">Random Number Table</h2>
+                <div class="form-group">
+                    <label for="rows">Rows</label>
+                    <input type="number" name="rows" id="rows" class="text form-control" value="20">
+                </div>
+                <div class="form-group">
+                    <label for="rows">Columns</label>
+                    <input type="number" name="cols" id="cols" class="text form-control" value="10">
+                </div>
+                <div class="form-group">
+                    <label for="block-min">Minimum Value</label>
+                    <input type="number" name="block-min" id="block-min" class="text form-control" value="0">
+                </div>
+                <div class="form-group">
+                    <label for="block-max" style="display: block;">Maximum Value</label>
+                    <input type="number" name="block-max" id="block-max" class="text form-control" value="99999">
+                    &nbsp;
+                    <button onclick="tableButtonClick()" class="btn btn-lg btn-primary" id="table-generate-inline">Generate</button>
+                </div>
+
+                <button onclick="tableButtonClick()" class="btn btn-lg btn-primary" id="table-generate-block">Generate</button>
+                
+            </div>
+            
+            <div id="random-number-list-right" class="container px456" style="display: none;"></div>
+        </div>
+
+        <div>&nbsp;</div>
+        <div id="results-list"></div>
+    </div>
+    <div id="results-table"></div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+table {
+    font-family: 'Roboto Mono', monospace;
+}
+
+/***********
+BUTTONS
+***********/
+
+.btn-basic {
+    background-color: #ddd;
+    border-color: #ccc;
+}
+
+.btn-basic:hover {
+    background-color: #ccc;
+}
+
+.btn-dark {
+    background-color: #333;
+    border-color: #222;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #222;
+    color: white;
+}
+
+.btn-dark:focus {
+    color: white;
+}
+
+/* Darkmode button */
+#darkmode-toggle::before {
+    content: 'Dark ';
+}
+
+td strong {
+    background-color: lightblue;
+    padding: 2px;
+}
+
+/***********
+ALLIGNMENT
+***********/
+
+.numList td {
+    padding: 8px;
+    display: inline-block;
+}
+
+#results-table {
+    padding: 30px;
+    padding-top: 0;
+}
+
+#results-list {
+    position: absolute;
+    text-align: center;
+}
+
+#options {
+    padding-top: 15px;
+}
+
+#results-list {
+    width: 100%;
+}
+
+/**************
+RESPONSIVNESS
+**************/
+
+@media screen and (min-width: 1000px) {
+    #wrapper {
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .noprint-br {
+        clear: both;
+    }
+
+    #results-list {
+        width: 1000px;
+    }
+}
+
+@media print {
+    .noprint { display: none; }
+}
