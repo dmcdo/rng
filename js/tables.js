@@ -42,3 +42,10 @@ function sortNumber(numArray) {
     return numArray.sort((a, b) => a - b); // For ascending sort
     // numArray.sort((a, b) => b - a); // For descending sort
 }
+
+// Pads 0s (or z) in front of number
+function pad(n, width, z) {
+    z = z || '0';
+    n = n + '';
+    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}

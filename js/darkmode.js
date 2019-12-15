@@ -4,8 +4,7 @@ if (cookieValue === 'true') darkmode();
 
 function darkmode () {
     var cssId = 'darkmode';
-    if (!document.getElementById(cssId))
-    {
+    if (!document.getElementById(cssId)) {
         let head  = document.getElementsByTagName('head')[0];
         let link  = document.createElement('link');
         link.id   = 'darkmode';

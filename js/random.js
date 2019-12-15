@@ -31,10 +31,3 @@ function randIntBlock (min, max) {
     let width = String(max).length;
     return pad(block, width);
 }
-
-// Pads 0s (or z) in front of number
-function pad(n, width, z) {
-    z = z || '0';
-    n = n + '';
-    return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-}
