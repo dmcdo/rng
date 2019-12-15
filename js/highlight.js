@@ -5,7 +5,7 @@ document.addEventListener('click', () => {
 
 	if (event.target.className.includes('listElemRepeat')) {
 		Array.from(document.getElementsByClassName('listElemRepeat')).forEach(elem => {
-			if (elem.innerText == event.target.innerText) {
+			if (elem.innerText === event.target.innerText) {
 				elem.classList.add('listElemRepeatSelected');
 			}
 		});

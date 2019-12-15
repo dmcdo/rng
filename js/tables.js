@@ -21,7 +21,7 @@ function HTMLRandNumList (length, min, max, boldRepeats = false, allowRepeats = 
             for (let i = 0; i < nums.length; i++) { // For each number
 
                 if (boldRepeats) { // Identify repeats
-                    let filteredNumsArray = nums.filter(num => num == nums[i]).length;
+                    let filteredNumsArray = nums.filter(num => num === nums[i]).length;
                     if (filteredNumsArray > 1) // If more than one instance of the current number in array
                         HTML += '<td class="listElem listElemRepeat">' + nums[i] + '</td>'; // Bold cell
                     else
