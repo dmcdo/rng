@@ -37,9 +37,10 @@ BUTTONS
     content: 'Dark ';
 }
 
-td strong {
+.listElemRepeat {
     background-color: lightblue;
     padding: 2px;
+    font-weight: bold;
 }
 
 /***********

@@ -23,9 +23,9 @@ function HTMLRandNumList (length, min, max, boldRepeats = false, allowRepeats = 
                 if (boldRepeats) { // Identify repeats
                     let filteredNumsArray = nums.filter(num => num == nums[i]).length;
                     if (filteredNumsArray > 1) // If more than one instance of the current number in array
-                        HTML += '<td><strong>' + nums[i] + '</td></strong>'; // Bold cell
+                        HTML += '<td class="listElem listElemRepeat">' + nums[i] + '</td>'; // Bold cell
                     else
-                        HTML += '<td>' + nums[i] + '</td>'; // Normal cell
+                        HTML += '<td class="listElem">' + nums[i] + '</td>'; // Normal cell
                 }
 
                 else { // Don't identify repeats
