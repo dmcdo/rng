@@ -43,6 +43,10 @@ BUTTONS
     font-weight: bold;
 }
 
+.listElemRepeatSelected {
+    background-color: orange;
+}
+
 /***********
 ALLIGNMENT
 ***********/
