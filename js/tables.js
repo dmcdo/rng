@@ -14,7 +14,8 @@ function HTMLRandNumTable (rows, cols, min, max) {
 
 function HTMLRandNumList (length, min, max, boldRepeats = false, allowRepeats = true, sort = false) {
     let nums = randIntArray(length, min, max, allowRepeats);
-    if (sort) sortNumber(nums);
+    if (sort) nums.sort((a, b) => a - b);
+
     let HTML = '<table class="numList">';
         HTML += '<tr>'; // Numbers will occupy one inline row
             if (boldRepeats) {
@@ -35,11 +36,6 @@ function HTMLRandNumList (length, min, max, boldRepeats = false, allowRepeats = 
         HTML += '</tr>';
     HTML += '</table>';
     return HTML;
-}
-
-function sortNumber(numArray) {
-    return numArray.sort((a, b) => a - b); // For ascending sort
-    // numArray.sort((a, b) => b - a); // For descending sort
 }
 
 // Pads 0s (or z) in front of number
